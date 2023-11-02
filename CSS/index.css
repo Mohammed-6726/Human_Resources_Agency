@@ -1,0 +1,26 @@
+/* serves section */
+.serves-section{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.serves-section .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(300px, 1fr));
+    gap: 5rem;
+}
+.serves-section .serv-box{
+    padding: 20px;
+    text-align: center;
+}
+.serves-section .serv-box img{
+    width: 5rem;
+    margin-bottom: 20px;
+}
+.serves-section .serv-box h3{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.serves-section .serv-box p{
+    font-size: 1.1rem;
+    line-height: 1.5;
+}

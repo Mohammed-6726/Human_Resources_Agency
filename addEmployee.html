@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS file's  -->
+    <link rel="icon" href="imgs/logo.png">
+    <link rel="stylesheet" href="CSS/addEmployee.css">
+    <link rel="stylesheet" href="CSS/mainstyle.css">
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=DM+Serif+Display:ital@1&family=Inconsolata:wght@400;500;800&family=Kanit:ital,wght@0,400;1,500&family=Open+Sans&family=Raleway:ital,wght@0,500;1,300;1,400&family=Roboto+Slab&family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Boxicons  -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Human Resources | add</title>
+</head>
+<body>
+    <header class="sticky">
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="index.html"><img src="imgs/logo.png" alt="logo"></a></div>
+                <i class="bx bx-list-ul toggle"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="addEmployee.html">Add</a></li>
+                    <li><a href="#serves">Serves</a></li>
+                </ul>
+                <div class="login"><button class="login-btn">Login</button></div>
+            </nav>
+        </div>
+    </header>
+    <div class="title">
+        <h1>Add a New Employee To The System</h1>
+    </div>
+    <div class="addEmployee-container">
+        <div class="container">
+            <div class="addEmployee-card">
+                <div class="addEmployee-form">
+                    <form action="#">
+                        <div class="col">
+                            <div class="form-item">
+                                <p>Employee Name</p>
+                                <input type="text" id="name" placeholder="Enter The Employee Name..." required>
+                            </div>
+                            <div class="form-item">
+                                <p>Employee ID</p>
+                                <input type="text" id="id" placeholder="Enter The Employee Id..." required>
+                            </div>
+                            <div class="form-item">
+                                <p>Employee Address</p>
+                                <input type="text" id="address" placeholder="Enter The Employee address..." required>
+                            </div>
+                            <div class="form-item">
+                                <p>Employee Phone Number</p>
+                                <input type="text" id="phone-number" placeholder="Enter The Employee phone number..." required>
+                            </div>
+                            <div class="form-item">
+                                <p>Employee Date Of Birth</p>
+                                <input type="date" id="date-of-birth" placeholder="Enter The Employee date of birth...." required>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-item">
+                                <p >Employee salary</p>
+                                <input type="text" id="salary" placeholder="Enter The Employee salary..." required>
+                            </div>
+                            <div class="form-item">
+                                <p>Employee Marital Status</p>
+                                <input type="text" id="marital-status" placeholder="Enter The Employee marital status..." required>
+                            </div>
+                            <div class="form-item">
+                                <p>Employee Number Of Actual Approved</p>
+                                <input type="text" id="number-of-actual-approved" placeholder="Enter The Employee number of actual approved..." required>
+                            </div>
+                            <div class="form-item">
+                                <p>Employee Number Of Available Vacation Days</p>
+                                <input type="text" id="number-of-available-vacation-days" placeholder="Enter The Employee number of available vacation days..." required>
+                            </div>
+                            <div class="form-item">
+                                <label for="male">Male</label>
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="female">Female</label>
+                                <input type="radio" id="female" name="gender" value="female">
+                            </div>
+                        </div>
+                    </form>
+                    <button type="submit" class="login-btn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="full-footer-content" id="footer">
+        <div class="footer container">
+            <div class="footer-box">
+                <div class="logo"><img src="imgs/logo.png"></div>
+                <div class="social">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-youtube"></i></a>
+            </div>
+            </div>
+            <div class="footer-box">
+                <h3>pages</h3>
+                <a href="index.html">Home</a>
+                <a href="addEmployee.html">Add Employee</a>
+            </div>
+            <div class="footer-box">
+                <h3>Legal</h3>
+                <a href="#">Privce Policy</a>
+                <a href="#">Refund Policy</a>
+                <a href="#">Terms Of use</a>
+                <a href="#">Terms Of use</a>
+                <a href="#">Disclamer</a>
+            </div>
+            <div class="footer-box">
+                <h3>Branches</h3>
+                <p>United States</p>
+                <p>Saudi Arabia</p>
+                <p>Japan</p>
+                <p>Germany</p>
+            </div>
+        </div>
+        <div class="copyright">
+        <p>© <span></span> .Web technology Project 1 Human Resources Website </p>
+        </div>
+</div>
+<script src="JS/main.js"></script>
+</body>
+</html>
