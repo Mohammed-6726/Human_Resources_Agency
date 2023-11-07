@@ -33,6 +33,104 @@ body{
 .sticky + div {
     padding-top: 50px;
 }
+.saerch-bar-container table.saerch-table{
+    display: none;
+}
+.saerch-bar-container table.saerch-table.active{
+    display: table;
+    width: 100%;
+    margin-top:15px ;
+    border-spacing: 0;
+    background: var(--PrimeryColor);
+    text-align: center;
+    overflow: hidden;
+    border-radius:0rem 0rem 3rem 3rem;
+    -webkit-border-radius:0rem 0rem 3rem 3rem;
+    -moz-border-radius:0rem 0rem 3rem 3rem;
+    -ms-border-radius:0rem 0rem 3rem 3rem;
+    -o-border-radius:0rem 0rem 3rem 3rem;
+}
+.saerch-bar-container table.saerch-table th,
+.saerch-bar-container table.saerch-table td{
+    padding: 12px 15px ;
+}
+.saerch-bar-container table.saerch-table td a{
+    text-decoration: none;
+    color: var(--TextColor);
+}
+.saerch-bar-container table.saerch-table td:hover a{
+    text-decoration: underline;
+}
+.saerch-bar-container table.saerch-table th{
+    background: var(--TextColor);
+    color: var(--PrimeryColor);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+header .saerch-bar-container{
+    display: none;
+}
+header .saerch-bar-container.open{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .saerch-bar-container .saerch-box{
+    position: relative;
+}
+header .saerch-bar-container .saerch-box input{
+    border: none;
+    outline: none;
+    width: 450px;
+    height: 50px;
+    padding: 15px;
+    background-color: var(--PrimeryColor);
+    color: var(--TextColor);
+    font-weight: 500;
+    font-size: 1.2rem;
+    border-radius: 20rem;
+    -webkit-border-radius: 20rem;
+    -moz-border-radius: 20rem;
+    -ms-border-radius: 20rem;
+    -o-border-radius: 20rem;
+    transition: ease-in-out 0.2s;
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -ms-transition: ease-in-out 0.2s;
+    -o-transition: ease-in-out 0.2s;
+}
+header .saerch-bar-container .saerch-box button.saerch-btn {
+    position: absolute;
+    border: none;
+    outline: none;
+    background: var(--TextColor);
+    color: var(--PrimeryColor);
+    width: 10%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    left: 88%;
+    top: 5px;
+    border-radius: 20rem;
+    -webkit-border-radius: 20rem;
+    -moz-border-radius: 20rem;
+    -ms-border-radius: 20rem;
+    -o-border-radius: 20rem;
+    transition: 0.3s;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+header .saerch-bar-container .saerch-box button.saerch-btn:hover{
+    box-shadow: 1px 1px 30px var(--spanColor1);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
 header{
     background-color: var(--TextColor);
     box-shadow: 1px 1px 20px black;
@@ -46,10 +144,12 @@ header nav{
 header .logo img{
     width: 5rem;
 }
-header nav .login {
+header nav .header-btn {
     border-left: 1px solid var(--PrimeryColor);
 }
-header nav .login .login-btn{
+header nav .header-btn .login-btn ,
+header nav .header-btn .search-btn
+{
     border: none;
     outline: none;
     cursor: pointer;
@@ -66,7 +166,8 @@ header nav .login .login-btn{
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
 }
-header nav .login .login-btn:hover{
+header nav .header-btn .login-btn:hover ,
+header nav .header-btn .search-btn:hover {
     background-color: var(--spanColor1);
     color: var(--TextColor);
 }
@@ -85,7 +186,7 @@ header nav ul li a{
     font-size: 1.3rem;
     text-decoration: none;
     color: var(--PrimeryColor);
-    padding: 0 10px;
+    padding: 0 20px;
     transition: 0.3s;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
@@ -99,12 +200,12 @@ header nav ul li a.active
 }
 /* title section */
 .title{
-    margin-top: 8rem;
+    margin-top: 10rem;
     margin-bottom: 3rem;
     position: relative;
 }
 .title h1{
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     color: var(--spanColor2);
 }
@@ -152,7 +253,6 @@ header nav ul li a.active
     overflow:visible;
 }
 /* ////////////////////////////////////////////////////// */
-
 /* The footer Section  */
 .footer{
     display: flex;

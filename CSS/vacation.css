@@ -1,0 +1,188 @@
+/* vacation main page  */
+.vacation-card-container .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 2rem;
+    padding-bottom: 20rem;
+}
+.vacation-card-container .container .vacation-card{
+    text-align: center;
+    background: var(--spanColor2);
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    padding: 30px;
+    color: var(--TextColor);
+}
+.vacation-card-container .container .vacation-card img{
+    width: 5rem;
+    margin-bottom: 10px;
+}
+.vacation-card-container .container .vacation-card h3{
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.vacation-card-container .container .vacation-card p{
+    line-height: 1.5;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.vacation-card-container .container .vacation-card span a{
+    text-decoration: none;
+    background: var(--TextColor);
+    color: var(--PrimeryColor);
+    text-transform: uppercase;
+    padding: 15px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.vacation-card-container .container .vacation-card span:hover a{
+    background: var(--spanColor1);
+    color: var(--TextColor);
+}
+/* All The Submitted Vacations form Section  */
+.review-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+}
+.review-table table{
+    width: 60%;
+    height: 300px;
+    border-spacing: 0;
+    background: var(--spanColor2);
+    text-align: center;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+    -webkit-border-radius: 12px 12px 0 0;
+    -moz-border-radius: 12px 12px 0 0;
+    -ms-border-radius: 12px 12px 0 0;
+    -o-border-radius: 12px 12px 0 0;
+}
+.review-table th,td{
+    padding: 12px 15px ;
+}
+.review-table th{
+    background: var(--TextColor);
+    color: var(--PrimeryColor);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+.review-table td{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.review-table td button[class*=btn]{
+    border: none;
+    outline: none;
+    text-decoration: none;
+    cursor:pointer ;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 0.5rem;
+    margin: 0px 10px;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    color: var(--TextColor);
+}
+.review-table td button[class*=btn]:hover{
+    background-color: var(--TextColor);
+    color: var(--PrimeryColor);
+}
+
+/* vacation form page  */
+.EmployeeForm-container .container {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 4rem;
+}
+.EmployeeForm-container .container .EmployeeForm-card {
+    width: 60rem;
+    background: var(--TextColor);
+    color: var(--PrimeryColor);
+    padding: 4rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+}
+.EmployeeForm-container .container .EmployeeForm-card .EmployeeForm-form form{
+    display: grid;
+    grid-template-columns: repeat(2 ,minmax(250px,1fr)); 
+    gap: 3rem;
+}
+.EmployeeForm-container .container .EmployeeForm-card .EmployeeForm-form .form-item{
+    position: relative;
+    margin-bottom: 1rem;
+}
+.EmployeeForm-container .container .EmployeeForm-card .EmployeeForm-form .form-item p{
+    margin: 0.5rem;
+}
+.EmployeeForm-container .container .EmployeeForm-card .EmployeeForm-form  input[type="text"],
+.EmployeeForm-container .container .EmployeeForm-card .EmployeeForm-form  input[type="date"]{
+    border: none;
+    outline: none;
+    background: var(--PrimeryColor);
+    color: var(--TextColor);
+    padding: 1rem 1.5rem;
+    font-size: calc(1rem*.8);
+    font-weight: 600;
+    width: 100%;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    transition: ease-in-out 0.1s;
+    -webkit-transition: ease-in-out 0.1s;
+    -moz-transition: ease-in-out 0.1s;
+    -ms-transition: ease-in-out 0.1s;
+    -o-transition: ease-in-out 0.1s;
+}
+.EmployeeForm-container .container .EmployeeForm-card .EmployeeForm-form  input[type="text"]:focus{
+    outline: 3px solid green;
+}
+.EmployeeForm-container .container .EmployeeForm-card .EmployeeForm-form button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--spanColor2);
+    color: var(--TextColor);
+    padding: 1rem;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    width: 100%;
+    font-weight: 800;
+}
+.EmployeeForm-container .container .EmployeeForm-card .EmployeeForm-form button:hover{
+    opacity: 70%;
+}
