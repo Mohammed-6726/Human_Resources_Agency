@@ -53,6 +53,7 @@
     <div class="title">
         <h1>Employees Information </h1>
     </div>
+    <span id="ifempty"></span>
     <div class="employees-info">
         <table>
         <tr>
@@ -62,7 +63,7 @@
             <th>Gender</th>
             <th>address</th>
             <th>Phone Number</th>
-            <th>Number Of Approved Vacation Days</th>
+            <th>#N Of Approved Vacation Days</th>
             <th>salary</th>
             <th>Operations</th>
         </tr>
@@ -76,10 +77,11 @@
     searchBarFilter,
     footer,
     toggleClick,
-} from "./JS/main.js";
-function addEmployeeRequests(){
+    } from "./JS/main.js";
+    function addEmployeeRequests(){
     // Retrieve data from local storage
-    const addEmployeeRequests = JSON.parse(localStorage.getItem("addEmployeeRequests")) || [];    
+    const addEmployeeRequests = JSON.parse(localStorage.getItem("addEmployeeRequests")) || [];  
+    console.log(addEmployeeRequests);  
     // Reference to the table
     const table = document.querySelector(".employees-info table");
     
@@ -102,7 +104,7 @@ function addEmployeeRequests(){
         celladdress.innerHTML = request.address; 
         cellPhoneNumber.innerHTML = request.phoneNumbers; 
         cellNOAVD.innerHTML = request.numberOfAvailableVacationDays; 
-        cellSalary.innerHTML = request.salary; 
+        cellSalary.innerHTML = "$" + request.salary; 
         // Create buttons for approval and rejection
         const spanEditButton = document.createElement("span");
         const aEditButton = document.createElement("a");
@@ -112,7 +114,15 @@ function addEmployeeRequests(){
         aEditButton.textContent = "Edit";
         cellOperations.appendChild(aEditButton);
     });
+    if(addEmployeeRequests.length === 0){
+        let ifempty =document.getElementById("ifempty");
+        ifempty.textContent = " There is no employee added to the system yet , ";
+        let aLinkinsideifempty =document.createElement("a");
+        aLinkinsideifempty.setAttribute("href","addEmployee.html");
+        aLinkinsideifempty.textContent = "add employee"; 
+        ifempty.append(aLinkinsideifempty);
     }
+    };
     addEmployeeRequests();
     toggleClick();
     searchHeaderBtn();

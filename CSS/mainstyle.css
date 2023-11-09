@@ -217,6 +217,19 @@ header nav ul li a.active
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
 }
+#ifempty{
+    color: brown;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+#ifempty a{
+    color: var(--TextColor);
+    text-decoration: none;
+}
+#ifempty a:hover{
+    text-decoration: underline;
+}
 /* ////////////////////////////////////////////////////// */
 /* Landing Section */
 .landing-section .container{

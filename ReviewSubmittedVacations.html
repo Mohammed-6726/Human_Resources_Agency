@@ -56,6 +56,7 @@
     <div class="title">
         <h1>All The Submitted Vacations form </h1>
     </div>
+    <span id="ifempty"></span>
     <div class="review-table">
         <table>
         <tr>
@@ -109,7 +110,15 @@
     cellOperations.appendChild(approvalButton);
     cellOperations.appendChild(rejectionButton);
     });
+    if(vacationRequests.length === 0){
+        let ifempty =document.getElementById("ifempty");
+        ifempty.textContent = " There is no employee has a Vacation Form Submitted to the system yet , ";
+        let aLinkinsideifempty =document.createElement("a");
+        aLinkinsideifempty.setAttribute("href","VacationForm.html");
+        aLinkinsideifempty.textContent = "Submit a Vacation Form"; 
+        ifempty.append(aLinkinsideifempty);
     }
+    };
     vacationRequests();
     searchHeaderBtn();
     searchBarFilter();
