@@ -39,18 +39,19 @@ body{
 .saerch-bar-container table.saerch-table.active{
     display: table;
     width: 100%;
-    margin-top:15px ;
+    height: 50%;
+    margin-top: 5px ;
     border-spacing: 0;
     background: var(--PrimeryColor);
     text-align: center;
     overflow: hidden;
-    border-radius:0rem 0rem 3rem 3rem;
-    -webkit-border-radius:0rem 0rem 3rem 3rem;
-    -moz-border-radius:0rem 0rem 3rem 3rem;
-    -ms-border-radius:0rem 0rem 3rem 3rem;
-    -o-border-radius:0rem 0rem 3rem 3rem;
+    z-index: -1;
+    border-radius: 1rem 1rem 3rem 3rem;
+    -webkit-border-radius: 1rem 1rem 3rem 3rem;
+    -moz-border-radius: 1rem 1rem 3rem 3rem;
+    -ms-border-radius: 1rem 1rem 3rem 3rem;
+    -o-border-radius: 1rem 1rem 3rem 3rem;
 }
-.saerch-bar-container table.saerch-table th,
 .saerch-bar-container table.saerch-table td{
     padding: 12px 15px ;
 }
@@ -60,12 +61,6 @@ body{
 }
 .saerch-bar-container table.saerch-table td:hover a{
     text-decoration: underline;
-}
-.saerch-bar-container table.saerch-table th{
-    background: var(--TextColor);
-    color: var(--PrimeryColor);
-    text-transform: uppercase;
-    font-size: 1.3rem;
 }
 header .saerch-bar-container{
     display: none;

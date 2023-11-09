@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS file's  -->
-    <link rel="icon" href="imgs/logo.png">
-    <link rel="stylesheet" href="CSS/EmployeeAddUpdateInfo.css">
-    <link rel="stylesheet" href="CSS/mainstyle.css">
-    <!-- google fonts  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=DM+Serif+Display:ital@1&family=Inconsolata:wght@400;500;800&family=Kanit:ital,wght@0,400;1,500&family=Open+Sans&family=Raleway:ital,wght@0,500;1,300;1,400&family=Roboto+Slab&family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <!-- Boxicons  -->
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <title>Human Resources | add</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS file's  -->
+        <link rel="icon" href="imgs/logo.png">
+        <link rel="stylesheet" href="CSS/EmployeeAddUpdateInfo.css">
+        <link rel="stylesheet" href="CSS/mainstyle.css">
+        <!-- google fonts  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=DM+Serif+Display:ital@1&family=Inconsolata:wght@400;500;800&family=Kanit:ital,wght@0,400;1,500&family=Open+Sans&family=Raleway:ital,wght@0,500;1,300;1,400&family=Roboto+Slab&family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+        <!-- Boxicons  -->
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <title>Human Resources | Edit</title>
+    </head>
 <body>
     <div class="header-container">
         <header class="sticky">
@@ -51,7 +51,7 @@
             </header>
     </div>
     <div class="title">
-        <h1>Add Employee To The System</h1>
+        <h1>Edit Employees Information </h1>
     </div>
     <div class="addEmployee-container">
         <div class="container">
@@ -104,14 +104,16 @@
                                 <input type="radio" id="female" name="gender" value="female">
                             </div>
                         </div>
-                        <button type="submit">Submit</button>
+                        <button type="submit">update</button>
+                        <button type="submit">delete</button>
                     </form>
                     <span id="msg"></span>
                 </div>
             </div>
         </div>
     </div>
-    <div class="full-footer-content" id="footer"></div>
+    <div class="full-footer-content" id="footer">
+    </div>
     <script type="module">
     import{
     searchHeaderBtn,
@@ -119,42 +121,11 @@
     footer,
     toggleClick,
     } from "./JS/main.js";
-    function addEmployeeRequests(){
-    let EmployeeForm = document.querySelector(".addEmployee-form form");
-    EmployeeForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-    let addrequests = JSON.parse(localStorage.getItem("addEmployeeRequests")) || [];
-    let addrequest = {
-        Name: document.getElementById("Name").value,
-        id: document.getElementById("id").value,
-        address: document.getElementById("address").value,
-        phoneNumber: document.getElementById("phone-number").value,
-        dateOfBirth: document.getElementById("date-of-birth").value,
-        salary: document.getElementById("salary").value,
-        numberOfActualApproved: document.getElementById("number-of-actual-approved").value,
-        numberOfAvailableVacationDays: document.getElementById("number-of-available-vacation-days").value,
-        maritalStatus: document.getElementById("marital-status").value,
-        gender: document.querySelector('input[name="gender"]:checked').value 
-    };
-    addrequests.push(addrequest);
-    // Store the updated requests array in local storage
-    localStorage.setItem("addEmployeeRequests", JSON.stringify(addrequests));
-    
-    // Clear form fields
-    document.forms[1].reset();
-        const msg=document.getElementById("msg");
-        msg.textContent="!! The form has been submitted successfully"
-    setTimeout((e)=>{
-        msg.textContent=""
-    },4000)
-    });
-    }
-    addEmployeeRequests();
-    toggleClick();
     searchHeaderBtn();
     searchBarFilter();
+    toggleClick();
     footer();
     </script>
-    <script src="JS/main.js" type="module"></script>
+<script src="JS/main.js" type="module"></script>
 </body>
 </html>

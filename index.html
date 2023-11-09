@@ -44,6 +44,11 @@
                                 <button class="saerch-btn"><i class="bx bx-search-alt"></i></button>
                             </form>
                         </div>
+                        <table class="saerch-table">
+                            <tr>
+                                <td><a href="VacationForm.html"></a></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -87,6 +92,18 @@
         </div>
         <div class="full-footer-content" id="footer">
         </div>
-    <script src="JS/main.js"></script>
+        <script type="module">
+        import{
+        searchHeaderBtn,
+        searchBarFilter,
+        footer,
+        toggleClick,
+        } from "./JS/main.js";
+        searchHeaderBtn();
+        searchBarFilter();
+        toggleClick();
+        footer();
+        </script>
+    <script src="JS/main.js" type="module"></script>
 </body>
 </html>

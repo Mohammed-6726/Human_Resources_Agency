@@ -43,7 +43,7 @@ gap: 4rem;
     background: var(--PrimeryColor);
     color: var(--TextColor);
     padding: 1rem 1.5rem;
-    font-size: calc(1rem*.8);
+    font-size: 1.3rem;
     font-weight: 600;
     width: 100%;
     border-radius: 100px;
@@ -85,7 +85,13 @@ gap: 4rem;
 .addEmployee-container .container .addEmployee-card .addEmployee-form button:hover{
     opacity: 70%;
 }
-
+#msg{
+    color: green;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
 /* EmployeeInformation Section */
 .employees-info{
     display: flex;
@@ -123,6 +129,7 @@ td{
 td a.edit-btn{
     text-decoration: none;
     text-transform: uppercase;
+    cursor: pointer;
     background-color: var(--PrimeryColor);
     color: var(--TextColor);
     font-weight: 800;

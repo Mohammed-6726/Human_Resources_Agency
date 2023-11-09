@@ -43,6 +43,11 @@
                                 <button class="saerch-btn"><i class="bx bx-search-alt"></i></button>
                             </form>
                         </div>
+                        <table class="saerch-table">
+                            <tr>
+                                <td><a href="VacationForm.html"></a></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -55,35 +60,80 @@
         <div class="container">
             <div class="EmployeeForm-card">
                 <div class="EmployeeForm-form">
-                    <form action="#">
+                    <form>
+                        <div class="col">
                             <div class="form-item">
                                 <p>Employee Name</p>
-                                <input type="text" placeholder="Enter The Employee Name..." required>
-                            </div>
-                            <div class="form-item">
-                                <p>Employee ID</p>
-                                <input type="text" placeholder="Enter The Employee Id..." required>
+                                <input type="text" id="Name" placeholder="Enter The Employee Name..." required>
                             </div>
                             <div class="form-item">
                                 <p>From Date</p>
-                                <input type="date" required>
-                            </div>
-                            <div class="form-item">
-                                <p>To Date</p>
-                                <input type="date"  required>
+                                <input type="date" id="fromdate" required>
                             </div>
                             <div class="form-item">
                                 <p>your Reason</p>
-                                <input type="text" placeholder="Enter your Reason...." required>
+                                <input type="text" id="reason" placeholder="Enter your Reason...." required>
+                        </div>
+                        <button type="submit">Submit</button>
+                        </div>
+                        <div class="col">
+                            <div class="form-item">
+                                <p>Employee ID</p>
+                                <input type="text" id="id" placeholder="Enter The Employee Id..." required>
                             </div>
-                    </form>
-                    <button type="submit" class="login-btn">Submit</button>
+                            <div class="form-item">
+                                    <p>To Date</p>
+                                    <input type="date" id="todate" required>
+                            </div>
+                        </div>
+                        </form>
+                        <span id="msg"></span>
                 </div>
             </div>
         </div>
     </div>
     <div class="full-footer-content" id="footer">
     </div>
-    <script src="JS/main.js"></script>
+    <script type="module">
+    import{
+    searchHeaderBtn,
+    searchBarFilter,
+    footer,
+    toggleClick,
+    } from "./JS/main.js";
+    function vacationRequests(){
+        let EmployeeForm = document.querySelector(".EmployeeForm-form form");
+        EmployeeForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+        // Retrieve existing vacation requests from local storage
+        let requests = JSON.parse(localStorage.getItem("vacationRequests")) || [];
+        let request = {
+            fullName: document.getElementById("Name").value,
+            id: document.getElementById("id").value,
+            fromDate: document.getElementById("fromdate").value,
+            toDate: document.getElementById("todate").value,
+            reason: document.getElementById("reason").value
+        };
+        requests.push(request);
+        
+        // Store the updated requests array in local storage
+        localStorage.setItem("vacationRequests", JSON.stringify(requests));
+        
+        // Clear form fields
+        document.forms[1].reset();
+            const msg=document.getElementById("msg");
+            msg.textContent="!! The form has been submitted successfully"
+        setTimeout((e)=>{
+            msg.textContent=""
+        },4000)
+        });
+    }
+    vacationRequests();
+    searchHeaderBtn();
+    searchBarFilter();
+    toggleClick();
+    footer();
+    </script>
+    <script src="JS/main.js" type="module"></script>
 </body>
 </html>

@@ -15,6 +15,9 @@ function footer(){
         <h3>pages</h3>
         <a href="index.html">Home</a>
         <a href="addEmployee.html">Add Employee</a>
+        <a href="EmployeeInformation.html">Employee Information</a>
+        <a href="vacation.html">vacation</a>
+        <a href="index.html#serves">Serves</a>
     </div>
     <div class="footer-box">
         <h3>Legal</h3>
@@ -37,41 +40,68 @@ function footer(){
 `
     const fullFooterContent = document.querySelector('.full-footer-content');
     fullFooterContent.innerHTML = footerContent
+    //---------------------- copyright Section 
+    let copyright = document.querySelector('.copyright p>span');
+    copyright.textContent = new Date().getFullYear();
 }
 footer();
-const toggleClick = document.querySelector(".toggle");
-toggleClick.onclick = function(){
-    if(toggleClick.classList.contains("click")){
-    toggleClick.classList.remove("click");
-    }
-    else{
-    toggleClick.classList.add("click");
+function toggleClick(){
+    const toggleClick = document.querySelector(".toggle");
+    toggleClick.onclick = function(){
+        if(toggleClick.classList.contains("click")){
+        toggleClick.classList.remove("click");
+        }
+        else{
+        toggleClick.classList.add("click");
+        }
     }
 }
-//EmployeeInformation page section  employees-info 
-
 //--------------------- saerch bar container box container
-const saerchBtn = document.querySelector('.header-btn button.search-btn');
-const saerchBtn2 = document.querySelector('.vacation-card span>a[href=Sear]');
-// console.log(saerchBtn2);
-const saerchBarContainer =document.querySelector('.saerch-bar-container');
-console.log(saerchBtn);
+function searchHeaderBtn (){
+let saerchBtn = document.querySelector('.header-btn button.search-btn');
+let saerchBarContainer =document.querySelector('.saerch-bar-container');
 saerchBtn.addEventListener('click',(e)=>{
     saerchBarContainer.classList.toggle("open");
 })
-saerchBtn2.addEventListener('click',(e)=>{
-    e.preventDefault();
-    saerchBarContainer.classList.toggle("open");
-})
+}
+function vacationCardBtn(){
+    let saerchBtn2 = document.querySelector('.vacation-card a[href="Sear"]'); 
+    let saerchBarContainer =document.querySelector('.saerch-bar-container');
+    saerchBtn2.addEventListener('click',(e)=>{
+        e.preventDefault();
+        saerchBarContainer.classList.toggle("open");
+    })
+}
 //------------------------saerch bar Table Form 
-const saerchTable =document.querySelector(".saerch-table");
+function searchBarFilter(){
 const saerchBoxForm =document.querySelector(".saerch-box form");
-saerchBoxForm.addEventListener('submit',(e)=>{
-    e.preventDefault();
-    saerchTable.classList.toggle("active");
+const addEmployeeRequests = JSON.parse(localStorage.getItem("addEmployeeRequests")) || [];
+const saerchTableactive = document.querySelector(".saerch-table");
+saerchBoxForm.addEventListener('keyup',(e)=>{
+    const searchString =  e.target.value.toLowerCase();
+    saerchTableactive.textContent = "";
+    const addEmployeeRequestsfilterd = addEmployeeRequests.filter((Employee) =>{
+        return Employee.Name.toLowerCase().includes(searchString);
+    })
+    addEmployeeRequestsfilterd.forEach((request,index) => {
+        let aLink = document.createElement("a");
+        aLink.setAttribute("href","VacationForm.html");
+        console.log(aLink);
+        const row = saerchTableactive.insertRow(-1); 
+        const cellNumber = row.insertCell(0);
+        const cellName = row.insertCell(1);
+        cellNumber.textContent = index + 1; 
+        aLink.textContent = request.Name; 
+        cellName.append(aLink);
+    });
+    saerchTableactive.classList.toggle("active");
 })
+}
+export{
+    searchHeaderBtn,
+    searchBarFilter,
+    footer,
+    vacationCardBtn,
+    toggleClick,
+}
 
-//---------------------- copyright Section 
-let copyright = document.querySelector('.copyright p>span');
-console.log(copyright);
-copyright.textContent = new Date().getFullYear();

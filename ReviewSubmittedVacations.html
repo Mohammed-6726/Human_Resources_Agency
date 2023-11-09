@@ -43,6 +43,11 @@
                                 <button class="saerch-btn"><i class="bx bx-search-alt"></i></button>
                             </form>
                         </div>
+                        <table class="saerch-table">
+                            <tr>
+                                <td><a href="VacationForm.html"></a></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -61,19 +66,56 @@
             <th>To Data</th>
             <th>Operations</th>
         </tr>
-            <tr>
-            <td>1</td>
-            <td>Mohammed</td>
-            <td>20200738</td>
-            <td></td>
-            <td></td>
-            <td><span><button class="app-btn">approval</button><button class="Rej-btn">Rejection</button></span></td>
-        </tr>
         </table>
     </div>
     
     <div class="full-footer-content" id="footer">
     </div>
-    <script src="JS/main.js"></script>
+    <script type="module">
+    import{
+    searchHeaderBtn,
+    searchBarFilter,
+    footer,
+    toggleClick,
+    } from "./JS/main.js";
+    //---------------------------------------------Review Submitted function
+    function vacationRequests(){
+    // Retrieve data from local storage
+    const vacationRequests = JSON.parse(localStorage.getItem("vacationRequests")) || [];
+    console.log(vacationRequests);
+    // Reference to the table
+    const table = document.querySelector(".review-table table");
+    // Loop through the vacation requests and create a row for each employee
+    vacationRequests.forEach((request, index) => {
+    const row = table.insertRow(-1); // Append a new row to the table
+    const cellNumber = row.insertCell(0);
+    const cellName = row.insertCell(1);
+    const cellId = row.insertCell(2);
+    const cellFromDate = row.insertCell(3);
+    const cellToDate = row.insertCell(4);
+    const cellOperations = row.insertCell(5);
+    cellNumber.innerHTML = index + 1; // Add the employee number
+    cellName.innerHTML = request.fullName; // Add the employee name
+    cellId.innerHTML = request.id; // Add the employee ID
+    cellFromDate.innerHTML = request.fromDate; // Add the "From Date"
+    cellToDate.innerHTML = request.toDate; // Add the "To Date"
+    // Create buttons for approval and rejection
+    const approvalButton = document.createElement("button");
+    approvalButton.classList.add("app-btn");
+    approvalButton.textContent = "Approval";
+    const rejectionButton = document.createElement("button");
+    rejectionButton.classList.add("rej-btn");
+    rejectionButton.textContent = "Rejection";
+    cellOperations.appendChild(approvalButton);
+    cellOperations.appendChild(rejectionButton);
+    });
+    }
+    vacationRequests();
+    searchHeaderBtn();
+    searchBarFilter();
+    toggleClick();
+    footer();
+    </script>
+    <script src="JS/main.js" type="module"></script>
 </body>
 </html>

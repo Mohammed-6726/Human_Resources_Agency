@@ -45,20 +45,7 @@
                         </div>
                         <table class="saerch-table">
                             <tr>
-                                <th>#</th>
-                                <th>Name</th>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td><a href="VacationForm.html">moahmmed</a></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td><a href="VacationForm.html">moahmmed Ahmaed</a></td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td><a href="VacationForm.html">moahmmed Hamed</a></td>
+                                <td><a href="VacationForm.html"></a></td>
                             </tr>
                         </table>
                     </div>
@@ -89,6 +76,20 @@
     </div>
     <div class="full-footer-content" id="footer">
     </div>
-    <script src="JS/main.js"></script>
+    <script type="module">
+    import{
+    searchHeaderBtn,
+    searchBarFilter,
+    footer,
+    toggleClick,
+    vacationCardBtn,
+    } from "./JS/main.js";
+    searchHeaderBtn();
+    vacationCardBtn();
+    searchBarFilter();
+    footer();
+    toggleClick();
+    </script>
+    <script src="JS/main.js" type="module"></script>
 </body>
 </html>

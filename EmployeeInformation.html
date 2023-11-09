@@ -43,6 +43,8 @@
                                 <button class="saerch-btn"><i class="bx bx-search-alt"></i></button>
                             </form>
                         </div>
+                        <table class="saerch-table">
+                        </table>
                     </div>
                 </div>
             </div>
@@ -58,27 +60,65 @@
             <th>Name</th>
             <th>id</th>
             <th>Gender</th>
-            <th>Email</th>
+            <th>address</th>
             <th>Phone Number</th>
             <th>Number Of Approved Vacation Days</th>
             <th>salary</th>
             <th>Operations</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Mohammed</td>
-            <td>20200738</td>
-            <td>Male</td>
-            <td>moodee6726@gmail.com</td>
-            <td>010101010</td>
-            <td>3</td>
-            <td>$3500</td>
-            <td><span><a href="Update.html" class="edit-btn">Edit</a></span></td>
-        </tr>
         </table>
         </div>
     <div class="full-footer-content" id="footer">
     </div>
-    <script src="JS/main.js"></script>
+    <script type="module">
+    import{
+    searchHeaderBtn,
+    searchBarFilter,
+    footer,
+    toggleClick,
+} from "./JS/main.js";
+function addEmployeeRequests(){
+    // Retrieve data from local storage
+    const addEmployeeRequests = JSON.parse(localStorage.getItem("addEmployeeRequests")) || [];    
+    // Reference to the table
+    const table = document.querySelector(".employees-info table");
+    
+    // Loop through the vacation requests and create a row for each employee
+    addEmployeeRequests.forEach((request, index) => {
+        const row = table.insertRow(-1); // Append a new row to the table
+        const cellNumber = row.insertCell(0);
+        const cellName = row.insertCell(1);
+        const cellId = row.insertCell(2);
+        const cellgender = row.insertCell(3);
+        const celladdress = row.insertCell(4);
+        const cellPhoneNumber = row.insertCell(5);
+        const cellNOAVD = row.insertCell(6);
+        const cellSalary = row.insertCell(7);
+        const cellOperations = row.insertCell(8);
+        cellNumber.innerHTML = index + 1; 
+        cellName.innerHTML = request.Name; 
+        cellId.innerHTML = request.id; 
+        cellgender.innerHTML = request.gender;
+        celladdress.innerHTML = request.address; 
+        cellPhoneNumber.innerHTML = request.phoneNumbers; 
+        cellNOAVD.innerHTML = request.numberOfAvailableVacationDays; 
+        cellSalary.innerHTML = request.salary; 
+        // Create buttons for approval and rejection
+        const spanEditButton = document.createElement("span");
+        const aEditButton = document.createElement("a");
+        aEditButton.setAttribute("href","Edit.html");
+        spanEditButton.append(aEditButton)
+        aEditButton.classList.add("edit-btn");
+        aEditButton.textContent = "Edit";
+        cellOperations.appendChild(aEditButton);
+    });
+    }
+    addEmployeeRequests();
+    toggleClick();
+    searchHeaderBtn();
+    searchBarFilter();
+    footer();
+    </script>
+    <script src="JS/main.js" type="module"></script>
 </body>
 </html>
