@@ -97,14 +97,14 @@
         const cellNOAVD = row.insertCell(6);
         const cellSalary = row.insertCell(7);
         const cellOperations = row.insertCell(8);
-        cellNumber.innerHTML = index + 1; 
-        cellName.innerHTML = request.Name; 
-        cellId.innerHTML = request.id; 
-        cellgender.innerHTML = request.gender;
-        celladdress.innerHTML = request.address; 
-        cellPhoneNumber.innerHTML = request.phoneNumbers; 
-        cellNOAVD.innerHTML = request.numberOfAvailableVacationDays; 
-        cellSalary.innerHTML = "$" + request.salary; 
+        cellNumber.textContent = index + 1; 
+        cellName.textContent = request.Name; 
+        cellId.textContent = request.id; 
+        cellgender.textContent = request.gender;
+        celladdress.textContent = request.address; 
+        cellPhoneNumber.textContent = request.phoneNumbers; 
+        cellNOAVD.textContent = request.numberOfAvailableVacationDays; 
+        cellSalary.textContent = "$" + request.salary; 
         // Create buttons for approval and rejection
         const spanEditButton = document.createElement("span");
         const aEditButton = document.createElement("a");

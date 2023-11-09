@@ -95,11 +95,11 @@
     const cellFromDate = row.insertCell(3);
     const cellToDate = row.insertCell(4);
     const cellOperations = row.insertCell(5);
-    cellNumber.innerHTML = index + 1; // Add the employee number
-    cellName.innerHTML = request.fullName; // Add the employee name
-    cellId.innerHTML = request.id; // Add the employee ID
-    cellFromDate.innerHTML = request.fromDate; // Add the "From Date"
-    cellToDate.innerHTML = request.toDate; // Add the "To Date"
+    cellNumber.textContent = index + 1; // Add the employee number
+    cellName.textContent = request.fullName; // Add the employee name
+    cellId.textContent = request.id; // Add the employee ID
+    cellFromDate.textContent = request.fromDate; // Add the "From Date"
+    cellToDate.textContent = request.toDate; // Add the "To Date"
     // Create buttons for approval and rejection
     const approvalButton = document.createElement("button");
     approvalButton.classList.add("app-btn");
