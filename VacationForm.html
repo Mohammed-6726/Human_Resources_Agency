@@ -51,6 +51,9 @@
                     </div>
                 </div>
             </div>
+            <div class="msg-container">
+                <span id="msg"></span>
+            </div>
             </header>
     </div>
     <div class="title">
@@ -87,7 +90,6 @@
                             </div>
                         </div>
                         </form>
-                        <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -122,9 +124,12 @@
         // Clear form fields
         document.forms[1].reset();
             const msg=document.getElementById("msg");
+            const msgContainer =document.querySelector(".msg-container");
+            msgContainer.classList.add("active");
             msg.textContent="!! The form has been submitted successfully"
         setTimeout((e)=>{
             msg.textContent=""
+            msgContainer.classList.remove("active");
         },4000)
         });
     }

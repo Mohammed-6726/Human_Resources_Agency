@@ -85,13 +85,6 @@ gap: 4rem;
 .addEmployee-container .container .addEmployee-card .addEmployee-form button:hover{
     opacity: 70%;
 }
-#msg{
-    color: green;
-    font-size: 1.2rem;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-}
 /* EmployeeInformation Section */
 
 .employees-info{

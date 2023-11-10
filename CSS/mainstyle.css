@@ -217,11 +217,17 @@ header nav ul li a.active
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
 }
+.ifempty-container.active{
+    background-color: brown;
+    opacity: 70%;
+    padding: 10px;
+    width: 100%;
+}
 #ifempty{
-    color: brown;
+    color: var(--PrimeryColor);
     display: flex;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 #ifempty a{
     color: var(--TextColor);
@@ -229,6 +235,20 @@ header nav ul li a.active
 }
 #ifempty a:hover{
     text-decoration: underline;
+}
+
+/* msg  */
+.msg-container.active{
+    background-color: green;
+    opacity: 60%;
+    padding: 10px;
+    width: 100%;
+}
+#msg{
+    color: var(--PrimeryColor);
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
 }
 /* ////////////////////////////////////////////////////// */
 /* Landing Section */

@@ -48,12 +48,14 @@
                     </div>
                 </div>
             </div>
+            <div class="ifempty-container">
+                <span id="ifempty"></span>
+            </div>
             </header>
     </div>
     <div class="title">
         <h1>Employees Information </h1>
     </div>
-    <span id="ifempty"></span>
     <div class="employees-info">
         <table>
         <tr>
@@ -114,13 +116,18 @@
         aEditButton.textContent = "Edit";
         cellOperations.appendChild(aEditButton);
     });
+    let ifemptyContainer =document.querySelector(".ifempty-container");
     if(addEmployeeRequests.length === 0){
         let ifempty =document.getElementById("ifempty");
+        ifemptyContainer.classList.add("active");
         ifempty.textContent = " There is no employee added to the system yet , ";
         let aLinkinsideifempty =document.createElement("a");
         aLinkinsideifempty.setAttribute("href","addEmployee.html");
         aLinkinsideifempty.textContent = "add employee"; 
         ifempty.append(aLinkinsideifempty);
+    }
+    else{
+        ifemptyContainer.classList.remove("active");
     }
     };
     addEmployeeRequests();
