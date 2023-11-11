@@ -1,7 +1,8 @@
 # Human Resources Agency
 
 Welcome to the Human Resources Agency project! This project aims to provide a comprehensive solution for managing human resources in an organization. Whether you are an HR professional or an organization looking to streamline your HR processes, this system offers a range of features to help you manage employee data, recruitment, and other HR-related tasks.
-[home_page](imgs/mainimageredme.png)
+
+![home page](imgs/mainimageredme.png)
 
 ## Features
 
