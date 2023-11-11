@@ -54,6 +54,10 @@ Make sure you have the following software installed before setting up the projec
    
 Navigate to the project directory:
 
+   ```bash
+   cd Human_Resources_Agency
+   ```
 ```bash
-Copy code
-cd Human_Resources_Agency
+.code
+```
+
