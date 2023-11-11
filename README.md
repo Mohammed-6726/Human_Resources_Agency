@@ -58,7 +58,7 @@ Navigate to the project directory:
    ```bash
    cd Human_Resources_Agency
    ```
-```bash
-.code
-```
+   ```bash
+   .code
+   ```
 
