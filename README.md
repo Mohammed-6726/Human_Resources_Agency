@@ -1,16 +1,7 @@
 # Human Resources Agency
 
 Welcome to the Human Resources Agency project! This project is designed for managing human resources in an organization. Whether you are an HR professional or an organization looking to streamline your HR processes, this system offers a range of features to help you manage employee data, recruitment, and other HR-related tasks.
-
-## Table of Contents
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
+[](imgs/mainimageredme.png)
 ## Features
 
 - Employee Management: Keep track of employee information, including personal details, contact information, and job-related details.
