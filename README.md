@@ -2,8 +2,9 @@
 
 Welcome to the Human Resources Agency project! This project aims to provide a comprehensive solution for managing human resources in an organization. Whether you are an HR professional or an organization looking to streamline your HR processes, this system offers a range of features to help you manage employee data, recruitment, and other HR-related tasks.
 
+ Visit site : https://mohammed-6726.github.io/Human_Resources_Agency/ 
+ 
 ![home page](imgs/mainimageredme.png)
-!visit The site (https://mohammed-6726.github.io/Human_Resources_Agency/)
 ## Features
 
 - Employee Management: Keep track of employee information, including personal details, contact information, and job-related details.
