@@ -31,7 +31,7 @@ body{
     z-index: 100;
 }
 .sticky + div {
-    padding-top: 50px;
+    padding-top: 20px;
 }
 .saerch-bar-container table.saerch-table{
     display: none;
@@ -128,7 +128,7 @@ header .saerch-bar-container .saerch-box button.saerch-btn:hover{
 }
 header{
     background-color: var(--TextColor);
-    box-shadow: 1px 1px 20px black;
+    box-shadow: 1px 1px 20px var(--TextColor);
     position: relative;
 }
 header nav{
@@ -256,8 +256,18 @@ header nav ul li a.active
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    gap: 3rem;
     align-items: center;
+}
+.landing-section .landing-section-content:first-child{
+    border-left: 1px solid var(--TextColor);
+}
+.landing-section .landing-section-content h1,
+.landing-section .landing-section-content p
+{
+    padding-left: 2rem;
 }
 .landing-section .landing-section-content h1{
     font-size: 4rem;
@@ -266,22 +276,25 @@ header nav ul li a.active
 }
 .landing-section .landing-section-content p{
     font-size: 1.3rem;
-    padding-bottom: 13rem;
+    margin-bottom: 10px;
     font-weight: 500;
 }
 .landing-section .landing-section-content  img{
     padding: 3rem;
-    width: 30rem;
+    width: 25rem;
     background: var(--TextColor);
-    border-radius: 30% 70% 67% 33% / 50% 52% 48% 50% ;
-    -webkit-border-radius: 30% 70% 67% 33% / 50% 52% 48% 50% ;
-    -moz-border-radius: 30% 70% 67% 33% / 50% 52% 48% 50% ;
-    -ms-border-radius: 30% 70% 67% 33% / 50% 52% 48% 50% ;
-    -o-border-radius: 30% 70% 67% 33% / 50% 52% 48% 50% ;
+    border-radius:50% ;
+    -webkit-border-radius:50% ;
+    -moz-border-radius:50% ;
+    -ms-border-radius:50% ;
+    -o-border-radius:50% ;
     overflow:visible;
 }
 /* ////////////////////////////////////////////////////// */
 /* The footer Section  */
+.full-footer-content{
+    padding-top:10rem ;
+}
 .footer{
     display: flex;
     justify-content: space-between;
@@ -338,15 +351,15 @@ header nav ul li a.active
 /* copyright */
 .copyright{
     padding: 20px;
-    color: var(--PrimeryColor);
-    background-color: black;
+    color: black;
+    background-color: var(--spanColor2);
 }
 .copyright{
     padding: 5px;
     text-align: center;
 }
 .copyright  p{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 .copyright  p>span{
     font-size: 0.8rem;
