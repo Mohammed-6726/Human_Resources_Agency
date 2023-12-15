@@ -62,7 +62,7 @@ let saerchBtn = document.querySelector('.header-btn button.search-btn');
 let saerchBarContainer =document.querySelector('.saerch-bar-container');
 saerchBtn.addEventListener('click',(e)=>{
     saerchBarContainer.classList.toggle("open");
-})
+});
 }
 function vacationCardBtn(){
     let saerchBtn2 = document.querySelector('.vacation-card a[href="Sear"]'); 
@@ -86,7 +86,6 @@ saerchBoxForm.addEventListener('keyup',(e)=>{
     addEmployeeRequestsfilterd.forEach((request,index) => {
         let aLink = document.createElement("a");
         aLink.setAttribute("href","VacationForm.html");
-        console.log(aLink);
         const row = saerchTableactive.insertRow(-1); 
         const cellNumber = row.insertCell(0);
         const cellName = row.insertCell(1);
@@ -95,13 +94,24 @@ saerchBoxForm.addEventListener('keyup',(e)=>{
         cellName.append(aLink);
     });
     saerchTableactive.classList.toggle("active");
-})
+});
 }
+function NaveLinks(){
+    let navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach((e) => {
+        e.addEventListener('click',()=>{
+            e.classList.toggle('active');
+        });
+    });
+}
+    NaveLinks();
+    toggleClick();
+    footer();
 export{
     searchHeaderBtn,
     searchBarFilter,
+    NaveLinks,
     footer,
     vacationCardBtn,
     toggleClick,
 }
-

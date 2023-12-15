@@ -231,6 +231,9 @@ header nav ul li a.active
 }
 
 /* msg  */
+.msg-container.error{
+    background-color: brown;
+}
 .msg-container.active{
     background-color: green;
     opacity: 60%;

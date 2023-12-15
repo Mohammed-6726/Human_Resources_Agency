@@ -111,7 +111,6 @@
 display: flex;
 justify-content: center;
 align-items: center;
-gap: 4rem;
 }
 .EmployeeForm-container .container .EmployeeForm-card {
     width: 60rem;
@@ -123,7 +122,6 @@ gap: 4rem;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    position: relative;
 }
 .EmployeeForm-container .container .EmployeeForm-card .EmployeeForm-form form{
     display: grid;
